@@ -26,6 +26,10 @@ $stmt = $connection->prepare('delete from comments where photo_id = ?');
 $stmt->bindValue(1,$photo_id);
 $stmt->execute();
 
+$stmt = $connection->prepare('delete from rating where photo_id = ?');
+$stmt->bindValue(1,$photo_id);
+$stmt->execute();
+
 
 $stmt = $connection->prepare('delete from photos where photo_id = ?');
 $stmt->bindValue(1,$photo_id);
